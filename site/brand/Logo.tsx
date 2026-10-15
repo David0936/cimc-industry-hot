@@ -1,12 +1,16 @@
-// 站点的字标和圆环标记：页面用 Wordmark 画站名（size 是高度，单位像素），RingMark 是小标记，转起来就是加载动画。
-// 这里用站名排字；有自己的 Logo 时，把 Wordmark 换成你的 SVG（保持同样的参数）。
+// 站点的字标和圆环标记。Wordmark 使用公司提供的正式 Logo，不重绘、不改色。
 import { SITE } from "../site.ts";
 
 export function Wordmark({ size = 24, className = "", title = SITE.name }: { size?: number; className?: string; title?: string }) {
+  const compact = size < 20;
   return (
-    <span className={`inline-flex items-center font-black leading-none tracking-[-0.03em] ${className}`} style={{ fontSize: Math.round(size * 0.92) }} aria-label={title} role="img">
-      <span aria-hidden="true" className="mr-[0.3em] inline-block size-[0.42em] rounded-full bg-accent" />
-      <span aria-hidden="true">{SITE.name}</span>
+    <span className={`inline-flex min-w-0 items-center gap-[0.55em] ${className}`} style={{ fontSize: Math.round(size * 0.88) }} aria-label={title} role="img">
+      <span className="relative shrink-0 overflow-hidden rounded-[3px] bg-white ring-1 ring-black/5" style={{ width: compact ? size * 2.2 : size * 2.55, height: compact ? size : size * 1.14 }} aria-hidden="true">
+        <img src="/cimc-enric-logo.jpg" alt="" className="absolute inset-0 size-full object-contain" draggable={false} />
+      </span>
+      <span aria-hidden="true" className={`${compact ? "hidden sm:inline" : "inline"} min-w-0 whitespace-nowrap font-bold leading-none tracking-[-0.035em] text-ink`}>
+        {SITE.name}
+      </span>
     </span>
   );
 }

@@ -18,14 +18,14 @@ export const EDITION_WHEN = {
 
 export const SITE = {
   /** 站名：导航、页面标题、分享图、RSS、MCP、后台都用它。 */
-  name: "安瑞能源雷达",
+  name: "中集安瑞能源雷达",
   /**
    * 行业词：拼进默认说法里，比如“AI 日报”“AI 动态”。
    * 改成“法律”“HR”“黄金”之类，页面上就会变成“法律日报”“法律动态”。
    */
   subject: "清洁能源",
   /** 首页的完整标题（浏览器标签、搜索结果）。 */
-  homeTitle: "安瑞能源雷达 — LNG、甲醇与氨市场情报",
+  homeTitle: "中集安瑞能源雷达 — LNG、绿色甲醇与氨市场情报",
   /** 主题目录页（/topics）的标题。 */
   topicsTitle: "能源主题：品种、价格驱动与关键机构",
   /** 反馈表单输入框里的示例。 */
@@ -49,7 +49,7 @@ export const SITE = {
   /** 默认域名，只在没设置 SITE_URL 时使用。 */
   defaultUrl: "http://localhost:3000",
   /** 标准图标（favicon.ico、icon.png、icon-192.png、apple-icon.png、logo.svg）以外也放在网站根目录的图标，site/brand/ 里的文件名（选填）；manifest.webmanifest 或外站引用了它们时用。 */
-  rootIcons: [] as string[],
+  rootIcons: ["cimc-enric-logo.jpg"] as string[],
   /**
    * MCP 工具名的前缀（小写字母、数字、下划线），工具会叫 myhot_get_latest、myhot_search……
    * 已经有人接入后就不要再改。
@@ -70,7 +70,7 @@ export const SITE = {
   github: "https://github.com/David0936/cimc-industry-hot" as string | null,
   /** 结构化数据里的网站运营者（搜索引擎用）。 */
   organization: {
-    name: "安瑞能源雷达",
+    name: "中集安瑞能源雷达",
     /** 创始人（选填）。 */
     founder: null as null | { name: string; alternateName?: string; jobTitle?: string; description?: string; url?: string },
   },
