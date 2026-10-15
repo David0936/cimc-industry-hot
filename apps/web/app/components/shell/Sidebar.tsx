@@ -43,7 +43,7 @@ export function Sidebar({ changelogVersion }: { changelogVersion: string | null 
   return (
     <aside className="sticky top-0 hidden h-dvh w-[224px] shrink-0 flex-col border-r border-line bg-sidebar px-4 pb-3.5 pt-5 lg:flex">
       <Link to="/" className="mb-5 block border-b border-line-soft px-1 pb-4 text-ink" aria-label={`${SITE.name} 首页`}>
-        <Wordmark size={24} className="flex-col items-start gap-2" />
+        <Wordmark size={30} className="flex-col items-start gap-2.5" />
         <span className="mt-2 block text-[9px] font-semibold tracking-[0.16em] text-ink-4">CLEAN ENERGY INTELLIGENCE</span>
       </Link>
       <nav className="scrollbar-thin -mx-1 flex-1 overflow-y-auto px-1" aria-label="主导航">

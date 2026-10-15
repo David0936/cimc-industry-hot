@@ -44,7 +44,7 @@ export default function Home() {
         <section className="market-hero mb-5 mt-2 overflow-hidden rounded-sheet border border-line bg-surface px-5 py-5 lg:mb-6 lg:mt-0 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-10 lg:px-7 lg:py-7">
           <div>
             <div className="mb-3 flex items-center gap-2 text-[10px] font-bold tracking-[0.16em] text-accent">
-              <span className="h-px w-7 bg-energy" />
+              <span className="h-[2px] w-8 bg-energy" />
               CIMC ENRIC · MARKET INTELLIGENCE
             </div>
             <h1 className="text-[25px] font-bold leading-[1.18] tracking-[-0.035em] text-ink lg:text-[34px]">{SITE.name}</h1>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           <div className="mt-5 grid grid-cols-3 gap-2 lg:mt-0">
             {[["01", "盯价格"], ["02", "找驱动"], ["03", "判影响"]].map(([n, label]) => (
-              <div key={n} className="min-w-[76px] border-t-2 border-accent pt-2">
+              <div key={n} className="min-w-[76px] border-t-2 border-energy pt-2">
                 <div className="text-[9px] font-bold tracking-[0.14em] text-energy">{n}</div>
                 <div className="mt-1 text-[13px] font-semibold text-ink-2">{label}</div>
               </div>

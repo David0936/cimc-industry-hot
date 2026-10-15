@@ -5,8 +5,14 @@ export function Wordmark({ size = 24, className = "", title = SITE.name }: { siz
   const compact = size < 20;
   return (
     <span className={`inline-flex min-w-0 items-center gap-[0.55em] ${className}`} style={{ fontSize: Math.round(size * 0.88) }} aria-label={title} role="img">
-      <span className="relative shrink-0 overflow-hidden rounded-[3px] bg-white ring-1 ring-black/5" style={{ width: compact ? size * 2.2 : size * 2.55, height: compact ? size : size * 1.14 }} aria-hidden="true">
-        <img src="/cimc-enric-logo.jpg" alt="" className="absolute inset-0 size-full object-contain" draggable={false} />
+      <span className="relative shrink-0 overflow-hidden rounded-[3px] bg-white ring-1 ring-black/5" style={{ width: compact ? size * 2.55 : size * 2.75, height: compact ? size : size * 1.03 }} aria-hidden="true">
+        <img
+          src="/cimc-enric-logo.jpg"
+          alt=""
+          className="pointer-events-none absolute max-w-none select-none"
+          style={{ width: "125%", height: "auto", left: "-12.5%", top: "-12.5%" }}
+          draggable={false}
+        />
       </span>
       <span aria-hidden="true" className={`${compact ? "hidden sm:inline" : "inline"} min-w-0 whitespace-nowrap font-bold leading-none tracking-[-0.035em] text-ink`}>
         {SITE.name}
